@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 export const Home = () => {
   // create statistics for user.
   // get Total user count from DB,
@@ -11,22 +14,32 @@ export const Home = () => {
   //   promoted: 0,// inc when user in promoted
   //   total_new: 0,// inc when a new user in created
 
+  const [emp, setEmp] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:8080/employee").then(function (response) {
+      // handle success
+      setEmp(response.data);
+      console.log(response.data);
+    });
+  }, []);
+
   return (
     <>
       <h3 className="welcome">Welcome To employee management system</h3>
       <div className="home">
         <span>Stats</span>
         <div>
-          Total Employees<span className="totalemp"></span>
+          Total Employees<span className="totalemp">{emp.length}</span>
         </div>
         <div>
-          Total Terminated: <span className="total_terminated"></span>
+          Total Terminated: <span className="total_terminated">0</span>
         </div>
         <div>
-          Total Promoted: <span className="total_promoted"></span>
+          Total Promoted: <span className="total_promoted">0</span>
         </div>
         <div>
-          Total New: <span className="total_new"></span>
+          Total New: <span className="total_new">0</span>
         </div>
       </div>
     </>
