@@ -40,3 +40,57 @@
 button {
   font-size: calc(10px + 2vmin);
 }
+
+.App {
+  text-align: center;
+}
+
+.navbar {
+  margin-top: 30px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.home {
+  margin-right: 20px;
+}
+.nav-home {
+  margin: 20px;
+  background-color: aliceblue;
+  text-decoration: none;
+  padding: 20px;
+}
+.nav-list {
+  margin: 20px;
+  background-color: aliceblue;
+  text-decoration: none;
+  padding: 20px;
+}
+.nav-login {
+  margin: 20px;
+  background-color: aliceblue;
+  text-decoration: none;
+  padding: 20px;
+}
+.nav-admin {
+  margin: 20px;
+  background-color: aliceblue;
+  text-decoration: none;
+  padding: 20px;
+}
+.nav-logout {
+  margin: 20px;
+  background-color: aliceblue;
+  text-decoration: none;
+  padding: 20px;
+}
+.home {
+  padding: 10px;
+  /* border: 1px red solid; */
+  width: 40%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.total_terminated {
+  background-color: grey;
+}
